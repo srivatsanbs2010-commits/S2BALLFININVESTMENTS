@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <title>Life Insurance</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <script>
 function toggleDropdown(id) {
@@ -12,27 +11,24 @@ function toggleDropdown(id) {
   });
   document.getElementById(id).classList.toggle('show');
 }
-
 window.addEventListener('click', function (e) {
   if (!e.target.classList.contains('dropbtn')) {
-    document.querySelectorAll('.dropdown-content')
-      .forEach(menu => menu.classList.remove('show'));
+    document.querySelectorAll('.dropdown-content').forEach(menu => menu.classList.remove('show'));
   }
 });
+function toggleMenu() {
+  document.getElementById('navMenu').classList.toggle('show');
+}
 </script>
 <body class="life-insurance">
 
-<body>
-
 <div class="navbar">
   <div class="logo">
-    <img src="../assets/logo.jpeg">
+    <img src="logo.jpeg" alt="Logo">
     <span>S2B ALLFIN INVESTMENTS</span>
   </div>
-
-  <div class="menu">
-    <a href="../index.html">Home</a>
-
+  <div class="menu" id="navMenu">
+    <a href="index.html">Home</a>
     <div class="dropdown">
       <a class="dropbtn" onclick="toggleDropdown('ins')">Insurance ▾</a>
       <div class="dropdown-content" id="ins">
@@ -42,35 +38,30 @@ window.addEventListener('click', function (e) {
         <a href="travel-insurance.html">Travel Insurance</a>
       </div>
     </div>
-
     <div class="dropdown">
       <a class="dropbtn" onclick="toggleDropdown('inv')">Investments ▾</a>
       <div class="dropdown-content" id="inv">
-        <a href="../investments/fixed-deposits.html">Fixed Deposits</a>
-        <a href="../investments/recurring-deposits.html">Recurring Deposits</a>
-        <a href="../investments/mutual-funds.html">Mutual Funds</a>
-        <a href="../investments/stocks-equity.html">Stocks & Equity</a>
-        <a href="../investments/bonds.html">Bonds</a>
-        <a href="../investments/commodities.html">Commodities</a>
-        <a href="../investments/real-estate.html">Real Estate</a>
-        <a href="../investments/crypto.html">Crypto</a>
+        <a href="fixed-deposits.html">Fixed Deposits</a>
+        <a href="recurring-deposits.html">Recurring Deposits</a>
+        <a href="mutual-funds.html">Mutual Funds</a>
+        <a href="stocks-equity.html">Stocks & Equity</a>
+        <a href="bonds.html">Bonds</a>
+        <a href="commodities.html">Commodities</a>
+        <a href="real-estate.html">Real Estate</a>
+        <a href="crypto.html">Crypto</a>
       </div>
     </div>
-
-    <a href="../planning/portfolio-management.html">Portfolio Management</a>
-    <a href="../planning/wills-succession.html">Wills & Succession</a>
-    <a href="../contact.html">Contact Us</a>
+    <a href="portfolio-management.html">Portfolio Management</a>
+    <a href="wills-succession.html">Wills & Succession</a>
+    <a href="contact.html">Contact Us</a>
   </div>
 </div>
 
 <section>
   <h2>Life Insurance</h2>
-  <p>Life insurance is less of an investment and more of a "financial safety net." At its core, it is a contract between an individual and an insurer where the insurer guarantees a sum of money to beneficiaries upon the policyholder's death. Modern life insurance has evolved into various forms: Term Insurance provides pure protection at a low cost, while Whole Life or Endowment Plans combine protection with a savings element. For most, the goal is to ensure that dependents can maintain their lifestyle, pay off debts (like mortgages), and fund future goals (like a child’s education) even in the absence of the primary breadwinner. It is the first step in any robust financial plan because it manages the ultimate risk: the loss of human capital.
-</p>
+  <p>Life insurance is less of an investment and more of a "financial safety net." At its core, it is a contract between an individual and an insurer where the insurer guarantees a sum of money to beneficiaries upon the policyholder's death. Modern life insurance has evolved into various forms: Term Insurance provides pure protection at a low cost, while Whole Life or Endowment Plans combine protection with a savings element. For most, the goal is to ensure that dependents can maintain their lifestyle, pay off debts (like mortgages), and fund future goals (like a child’s education) even in the absence of the primary breadwinner. It is the first step in any robust financial plan because it manages the ultimate risk: the loss of human capital.</p>
 </section>
 
 <footer>© 2025 S2B AllFin Investments</footer>
-
-<script>/* same JS block here */</script>
 </body>
 </html>

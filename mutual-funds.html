@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Life Insurance</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>Mutual Funds</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <script>
 function toggleDropdown(id) {
   document.querySelectorAll('.dropdown-content').forEach(menu => {
@@ -20,17 +20,17 @@ window.addEventListener('click', function (e) {
   }
 });
 </script>
-<body>
+
+<body class="mutual-funds">
 
 <div class="navbar">
   <div class="logo">
-    <img src="../assets/logo.jpeg">
+    <img src="logo.jpeg" alt="Logo">
     <span>S2B ALLFIN INVESTMENTS</span>
   </div>
 
   <div class="menu">
-    <a href="../index.html">Home</a>
-
+    <a href="index.html">Home</a>
     <div class="dropdown">
       <a class="dropbtn" onclick="toggleDropdown('ins')">Insurance ▾</a>
       <div class="dropdown-content" id="ins">
@@ -44,31 +44,33 @@ window.addEventListener('click', function (e) {
     <div class="dropdown">
       <a class="dropbtn" onclick="toggleDropdown('inv')">Investments ▾</a>
       <div class="dropdown-content" id="inv">
-        <a href="../investments/fixed-deposits.html">Fixed Deposits</a>
-        <a href="../investments/recurring-deposits.html">Recurring Deposits</a>
-        <a href="../investments/mutual-funds.html">Mutual Funds</a>
-        <a href="../investments/stocks-equity.html">Stocks & Equity</a>
-        <a href="../investments/bonds.html">Bonds</a>
-        <a href="../investments/commodities.html">Commodities</a>
-        <a href="../investments/real-estate.html">Real Estate</a>
-        <a href="../investments/crypto.html">Crypto</a>
+        <a href="fixed-deposits.html">Fixed Deposits</a>
+        <a href="recurring-deposits.html">Recurring Deposits</a>
+        <a href="mutual-funds.html">Mutual Funds</a>
+        <a href="stocks-equity.html">Stocks & Equity</a>
+        <a href="bonds.html">Bonds</a>
+        <a href="commodities.html">Commodities</a>
+        <a href="real-estate.html">Real Estate</a>
+        <a href="crypto.html">Crypto</a>
       </div>
     </div>
 
-    <a href="../planning/portfolio-management.html">Portfolio Management</a>
-    <a href="../planning/wills-succession.html">Wills & Succession</a>
-    <a href="../contact.html">Contact Us</a>
+    <a href="portfolio-management.html">Portfolio Management</a>
+    <a href="wills-succession.html">Wills & Succession</a>
+    <a href="contact.html">Contact Us</a>
   </div>
 </div>
 
 <section>
   <h2>Mutual Funds</h2>
-  <p>Mutual funds pool money from thousands of investors to buy a diversified basket of stocks, bonds, or other securities. Managed by professional fund managers, they offer an entry point into sophisticated markets for a fraction of the cost. Whether through SIPs (Systematic Investment Plans) or lump sums, mutual funds allow for diversification that would be impossible for an individual to achieve alone. They cater to all risk appetites, from "Aggressive Equity Funds" to "Conservative Debt Funds."
+  <p>
+    Mutual funds pool money from investors to build diversified portfolios.
+    Through SIPs or lump sums, they offer professional management and cater to
+    all risk levels—from aggressive equity to conservative debt funds.
+  </p>
 </section>
 
 <footer>© 2025 S2B AllFin Investments</footer>
 
-<script>/* same JS block here */</script>
 </body>
-<body class="mutual-funds"></body>
 </html>

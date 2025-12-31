@@ -25,7 +25,7 @@ body {
   box-shadow: 0 2px 10px rgba(0,0,0,0.12);
   position: sticky;
   top: 0;
-  z-index: 10000; /* FIX: stays above all content */
+  z-index: 10000;
 }
 
 .logo {
@@ -58,7 +58,7 @@ body {
 }
 
 /* ===================== */
-/* DROPDOWN (CLICK BASED – JS FRIENDLY) */
+/* DROPDOWN */
 /* ===================== */
 .dropdown {
   position: relative;
@@ -75,8 +75,6 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.18);
   z-index: 9999;
   overflow: hidden;
-
-  /* Smooth animation */
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.25s ease, transform 0.25s ease;
@@ -126,102 +124,146 @@ footer {
 /* PAGE BACKGROUNDS */
 /* ===================== */
 
-/* =====================
-   PAGE BACKGROUNDS (CENTERED)
-===================== */
-
 body.home {
   background:
     linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)),
-    url("../assets/home.jpg") no-repeat center center / cover;
+    url("home.jpg") no-repeat center center / cover;
 }
 
 body.life-insurance {
   background:
     linear-gradient(rgba(255,255,255,0.70), rgba(255,255,255,0.70)),
-    url("../assets/life.png") no-repeat center center / cover;
+    url("life.png") no-repeat center center / cover;
 }
 
 body.motor-insurance {
   background:
     linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)),
-    url("../assets/motor.png") no-repeat center center / cover;
+    url("motor.png") no-repeat center center / cover;
 }
 
 body.health-insurance {
   background:
     linear-gradient(rgba(255,255,255,0.72), rgba(255,255,255,0.72)),
-    url("../assets/health.png") no-repeat center center / cover;
+    url("health.png") no-repeat center center / cover;
 }
 
 body.travel-insurance {
   background:
     linear-gradient(rgba(255,255,255,0.70), rgba(255,255,255,0.70)),
-    url("../assets/travel.png") no-repeat center center / cover;
+    url("travel.png") no-repeat center center / cover;
 }
 
 body.fixed-deposits {
   background:
     linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)),
-    url("../assets/fd.jpg") no-repeat center center / cover;
+    url("fd.jpg") no-repeat center center / cover;
 }
 
 body.recurring-deposits {
   background:
     linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)),
-    url("../assets/rd.jpg") no-repeat center center / cover;
+    url("rd.jpg") no-repeat center center / cover;
 }
 
 body.mutual-funds {
   background:
     linear-gradient(rgba(255,255,255,0.60), rgba(255,255,255,0.60)),
-    url("../assets/mf.png") no-repeat center center / cover;
+    url("mf.png") no-repeat center center / cover;
 }
 
 body.stocks-equity {
   background:
     linear-gradient(rgba(255,255,255,0.60), rgba(255,255,255,0.60)),
-    url("../assets/stocks.png") no-repeat center center / cover;
+    url("stocks.png") no-repeat center center / cover;
 }
 
 body.bonds {
   background:
     linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)),
-    url("../assets/bonds.png") no-repeat center center / cover;
+    url("bonds.png") no-repeat center center / cover;
 }
 
 body.commodities {
   background:
     linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)),
-    url("../assets/commodities.png") no-repeat center center / cover;
+    url("commodities.png") no-repeat center center / cover;
 }
 
 body.real-estate {
   background:
     linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)),
-    url("../assets/real-estate.png") no-repeat center center / cover;
+    url("real-estate.png") no-repeat center center / cover;
 }
 
 body.crypto {
   background:
     linear-gradient(rgba(255,255,255,0.60), rgba(255,255,255,0.60)),
-    url("../assets/crypto.png") no-repeat center center / cover;
+    url("crypto.png") no-repeat center center / cover;
 }
 
 body.portfolio-management {
   background:
     linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)),
-    url("../assets/portfolio.png") no-repeat center center / cover;
+    url("portfolio.png") no-repeat center center / cover;
 }
 
 body.wills-succession {
   background:
     linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
-    url("../assets/wills.png") no-repeat center center / cover;
+    url("wills.png") no-repeat center center / cover;
 }
 
 body.contact {
   background:
     linear-gradient(rgba(255,255,255,0.80), rgba(255,255,255,0.80)),
-    url("../assets/contact.jpg") no-repeat center center / cover;
+    url("contact.jpg") no-repeat center center / cover;
 }
+/* ===================== */
+/* SOCIAL BUTTONS */
+/* ===================== */
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 18px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 10px;
+  color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.social-btn i {
+  font-size: 18px;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  opacity: 0.95;
+}
+
+/* ===================== */
+/* INDIVIDUAL BRAND COLORS */
+/* ===================== */
+
+.phone { background: #2ecc71; }
+.insta { background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af); }
+.fb { background: #1877f2; }
+.x { background: #000000; }
+.whatsapp { background: #25d366; }
+.telegram { background: #0088cc; }
+.linkedin { background: #0a66c2; }
+.email { background: #ea4335; }

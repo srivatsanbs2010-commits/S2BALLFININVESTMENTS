@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Life Insurance</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>Stocks & Equity</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <script>
 function toggleDropdown(id) {
   document.querySelectorAll('.dropdown-content').forEach(menu => {
@@ -20,16 +20,17 @@ window.addEventListener('click', function (e) {
   }
 });
 </script>
-<body>
+
+<body class="stocks-equity">
 
 <div class="navbar">
   <div class="logo">
-    <img src="../assets/logo.jpeg">
+    <img src="logo.jpeg" alt="Logo">
     <span>S2B ALLFIN INVESTMENTS</span>
   </div>
 
   <div class="menu">
-    <a href="../index.html">Home</a>
+    <a href="index.html">Home</a>
 
     <div class="dropdown">
       <a class="dropbtn" onclick="toggleDropdown('ins')">Insurance ▾</a>
@@ -44,31 +45,33 @@ window.addEventListener('click', function (e) {
     <div class="dropdown">
       <a class="dropbtn" onclick="toggleDropdown('inv')">Investments ▾</a>
       <div class="dropdown-content" id="inv">
-        <a href="../investments/fixed-deposits.html">Fixed Deposits</a>
-        <a href="../investments/recurring-deposits.html">Recurring Deposits</a>
-        <a href="../investments/mutual-funds.html">Mutual Funds</a>
-        <a href="../investments/stocks-equity.html">Stocks & Equity</a>
-        <a href="../investments/bonds.html">Bonds</a>
-        <a href="../investments/commodities.html">Commodities</a>
-        <a href="../investments/real-estate.html">Real Estate</a>
-        <a href="../investments/crypto.html">Crypto</a>
+        <a href="fixed-deposits.html">Fixed Deposits</a>
+        <a href="recurring-deposits.html">Recurring Deposits</a>
+        <a href="mutual-funds.html">Mutual Funds</a>
+        <a href="stocks-equity.html">Stocks & Equity</a>
+        <a href="bonds.html">Bonds</a>
+        <a href="commodities.html">Commodities</a>
+        <a href="real-estate.html">Real Estate</a>
+        <a href="crypto.html">Crypto</a>
       </div>
     </div>
 
-    <a href="../planning/portfolio-management.html">Portfolio Management</a>
-    <a href="../planning/wills-succession.html">Wills & Succession</a>
-    <a href="../contact.html">Contact Us</a>
+    <a href="portfolio-management.html">Portfolio Management</a>
+    <a href="wills-succession.html">Wills & Succession</a>
+    <a href="contact.html">Contact Us</a>
   </div>
 </div>
 
 <section>
   <h2>Stocks & Equity</h2>
-  <p>Investing in individual stocks means buying a piece of a business. This is the primary driver of long-term wealth because equities have historically outperformed almost all other asset classes over decades. However, with high potential reward comes high risk. Successful equity investing requires a deep understanding of company fundamentals, market cycles, and the emotional fortitude to withstand volatility. It is the "growth" component of a portfolio, meant for those with a long-term horizon
+  <p>
+    Equity investing means owning a part of a business. It has historically
+    delivered the highest long-term returns but comes with volatility.
+    Suitable for investors with a long-term horizon and higher risk tolerance.
+  </p>
 </section>
 
 <footer>© 2025 S2B AllFin Investments</footer>
 
-<script>/* same JS block here */</script>
 </body>
-<body class="stocks-equity"></body>
 </html>

@@ -1,318 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
   <title>Contact Us | S2B AllFin Investments</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <style>
-    /* Reset & Body */
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fa;
-      color: #333;
-    }
-
-    /* Header */
-    header {
-      background: #0a2540;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    /* Navbar */
-    .navbar {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      background: #fff;
-      padding: 10px 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      position: relative;
-      z-index: 100;
-    }
-
-    .navbar .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .navbar .logo img {
-      height: 50px;
-    }
-
-    .navbar .logo span {
-      font-weight: bold;
-      color: #0a2540;
-      font-size: 18px;
-    }
-
-    .menu {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      align-items: center;
-    }
-
-    .menu a, .dropbtn {
-      text-decoration: none;
-      color: #0a2540;
-      font-weight: bold;
-      padding: 8px 12px;
-      display: block;
-      cursor: pointer;
-    }
-
-    /* Dropdown */
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #ffffff;
-      min-width: 180px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-      z-index: 1000;
-      text-align: left;
-    }
-
-    .dropdown-content a {
-      padding: 10px 15px;
-      display: block;
-      color: #0a2540;
-      text-decoration: none;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #f1f1f1;
-    }
-
-    /* Show dropdown on hover (desktop) */
-    @media (min-width: 768px) {
-      .dropdown:hover .dropdown-content {
-        display: block;
-      }
-    }
-
-    /* Hamburger for mobile */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-    }
-
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background: #0a2540;
-    }
-
-    @media (max-width: 767px) {
-      .hamburger {
-        display: flex;
-      }
-
-      .menu {
-        width: 100%;
-        flex-direction: column;
-        display: none;
-      }
-
-      .menu.show {
-        display: flex;
-      }
-
-      .dropdown-content {
-        position: relative;
-      }
-    }
-
-    /* Section / Contact */
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    h2 {
-      color: #0a2540;
-      margin-bottom: 10px;
-    }
-
-    .social-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      margin-top: 30px;
-    }
-
-    .social-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      padding: 14px 18px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    .social-btn i {
-      font-size: 20px;
-    }
-
-    .social-btn:hover {
-      transform: translateY(-2px);
-      opacity: 0.9;
-    }
-
-    /* Platform Colors */
-    .phone { background: #0a2540; }
-    .insta { background: #E1306C; }
-    .fb { background: #1877F2; }
-    .x { background: #000000; }
-    .whatsapp { background: #25D366; }
-    .telegram { background: #0088cc; }
-    .linkedin { background: #0A66C2; }
-    .email { background: #6c757d; }
-
-    /* Footer */
-    footer {
-      background: #111;
-      color: #bbb;
-      text-align: center;
-      padding: 15px;
-      font-size: 13px;
-    }
-
-    footer p {
-      max-width: 800px;
-      margin: auto;
-      line-height: 1.5;
-    }
-
-  </style>
 </head>
-<body>
+<script>
+function toggleDropdown(id) {
+  document.querySelectorAll('.dropdown-content').forEach(menu => {
+    if (menu.id !== id) menu.classList.remove('show');
+  });
+  document.getElementById(id).classList.toggle('show');
+}
+function toggleMenu() {
+  document.getElementById('navMenu').classList.toggle('show');
+}
+window.addEventListener('click', function (e) {
+  if (!e.target.classList.contains('dropbtn')) {
+    document.querySelectorAll('.dropdown-content').forEach(menu => menu.classList.remove('show'));
+  }
+});
+</script>
+<body class="contact">
 
-  <!-- Header -->
-  <header>
-    <h1>S2B ALLFIN INVESTMENTS</h1>
-  </header>
-
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="logo">
-      <img src="assets/logo.jpeg" alt="Logo">
-      <span>S2B ALLFIN INVESTMENTS</span>
-    </div>
-
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-
-    <div class="menu" id="navMenu">
-      <a href="index.html">Home</a>
-
-      <div class="dropdown">
-        <a class="dropbtn" onclick="toggleDropdown('ins')">Insurance ▾</a>
-        <div class="dropdown-content" id="ins">
-          <a href="insurance/life-insurance.html">Life Insurance</a>
-          <a href="insurance/motor-insurance.html">Motor Insurance</a>
-          <a href="insurance/health-insurance.html">Health Insurance</a>
-          <a href="insurance/travel-insurance.html">Travel Insurance</a>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <a class="dropbtn" onclick="toggleDropdown('inv')">Investments ▾</a>
-        <div class="dropdown-content" id="inv">
-          <a href="investments/fixed-deposits.html">Fixed Deposits</a>
-          <a href="investments/recurring-deposits.html">Recurring Deposits</a>
-          <a href="investments/mutual-funds.html">Mutual Funds</a>
-          <a href="investments/stocks-equity.html">Stocks & Equity</a>
-          <a href="investments/bonds.html">Bonds</a>
-          <a href="investments/commodities.html">Commodities</a>
-          <a href="investments/real-estate.html">Real Estate</a>
-          <a href="investments/crypto.html">Crypto</a>
-        </div>
-      </div>
-
-      <a href="planning/portfolio-management.html">Portfolio Management</a>
-      <a href="planning/wills-succession.html">Wills & Succession</a>
-      <a href="contact.html">Contact Us</a>
-    </div>
+<div class="navbar">
+  <div class="logo">
+    <img src="logo.jpeg" alt="Logo">
+    <span>S2B ALLFIN INVESTMENTS</span>
   </div>
-
-  <!-- Contact Section -->
-  <section>
-    <h2>Contact Us</h2>
-    <p>Connect with us through any of the platforms below</p>
-
-    <div class="social-grid">
-      <a href="tel:+919842438143" class="social-btn phone"><i class="fas fa-phone"></i> Call Us</a>
-      <a href="https://www.instagram.com/financialbalaji" target="_blank" class="social-btn insta"><i class="fab fa-instagram"></i> Instagram</a>
-      <a href="https://www.facebook.com/financialbalaji" target="_blank" class="social-btn fb"><i class="fab fa-facebook-f"></i> Facebook</a>
-      <a href="https://x.com/financialbalaji" target="_blank" class="social-btn x"><i class="fab fa-x-twitter"></i> X (Twitter)</a>
-      <a href="https://wa.me/919842438143" target="_blank" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      <a href="https://t.me/yourusername" target="_blank" class="social-btn telegram"><i class="fab fa-telegram-plane"></i> Telegram</a>
-      <a href="https://www.linkedin.com/in/insurancebalaji4u" target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-      <a href="mailto:insurancebalaji4u@gmail.com" class="social-btn email"><i class="fas fa-envelope"></i> Email Us</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div><div></div><div></div>
+  </div>
+  <div class="menu" id="navMenu">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a class="dropbtn" onclick="toggleDropdown('ins')">Insurance ▾</a>
+      <div class="dropdown-content" id="ins">
+        <a href="life-insurance.html">Life Insurance</a>
+        <a href="motor-insurance.html">Motor Insurance</a>
+        <a href="health-insurance.html">Health Insurance</a>
+        <a href="travel-insurance.html">Travel Insurance</a>
+      </div>
     </div>
-  </section>
+    <div class="dropdown">
+      <a class="dropbtn" onclick="toggleDropdown('inv')">Investments ▾</a>
+      <div class="dropdown-content" id="inv">
+        <a href="fixed-deposits.html">Fixed Deposits</a>
+        <a href="recurring-deposits.html">Recurring Deposits</a>
+        <a href="mutual-funds.html">Mutual Funds</a>
+        <a href="stocks-equity.html">Stocks & Equity</a>
+        <a href="bonds.html">Bonds</a>
+        <a href="commodities.html">Commodities</a>
+        <a href="real-estate.html">Real Estate</a>
+        <a href="crypto.html">Crypto</a>
+      </div>
+    </div>
+    <a href="portfolio-management.html">Portfolio Management</a>
+    <a href="wills-succession.html">Wills & Succession</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</div>
 
-  <!-- Footer -->
-  <footer>
-    <p>
-      Disclaimer: Investments are subject to market risks. Returns are not guaranteed.<br>
-      © 2025 S2B AllFin Investments
-    </p>
-  </footer>
+<section>
+  <h2>Contact Us</h2>
+  <p>Connect with us through any of the platforms below:</p>
+  <div class="social-grid">
+    <a href="tel:+919842438143" class="social-btn phone"><i class="fas fa-phone"></i> Call Us</a>
+    <a href="https://www.instagram.com/financialbalaji" target="_blank" class="social-btn insta"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://www.facebook.com/financialbalaji" target="_blank" class="social-btn fb"><i class="fab fa-facebook-f"></i> Facebook</a>
+    <a href="https://x.com/financialbalaji" target="_blank" class="social-btn x"><i class="fab fa-x-twitter"></i> X (Twitter)</a>
+    <a href="https://wa.me/919842438143" target="_blank" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <a href="https://t.me/yourusername" target="_blank" class="social-btn telegram"><i class="fab fa-telegram-plane"></i> Telegram</a>
+    <a href="https://www.linkedin.com/in/insurancebalaji4u" target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+    <a href="mailto:insurancebalaji4u@gmail.com" class="social-btn email"><i class="fas fa-envelope"></i> Email Us</a>
+  </div>
+</section>
 
-  <!-- Scripts -->
-  <script>
-    /* Dropdown toggle */
-    function toggleDropdown(id) {
-      document.querySelectorAll('.dropdown-content').forEach(menu => {
-        if (menu.id !== id) menu.classList.remove('show');
-      });
-      document.getElementById(id).classList.toggle('show');
-    }
-
-    /* Close dropdowns on outside click */
-    window.addEventListener('click', function(e) {
-      if (!e.target.classList.contains('dropbtn')) {
-        document.querySelectorAll('.dropdown-content').forEach(menu => menu.classList.remove('show'));
-      }
-    });
-
-    /* Mobile menu toggle */
-    function toggleMenu() {
-      document.getElementById('navMenu').classList.toggle('show');
-    }
-  </script>
+<footer>
+  <p>Disclaimer: Investments are subject to market risks. Returns are not guaranteed.<br>© 2025 S2B AllFin Investments</p>
+</footer>
 </body>
-<body class="contact"></body>
 </html>
