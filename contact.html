@@ -63,17 +63,100 @@ window.addEventListener('click', function (e) {
 
 <section>
   <h2>Contact Us</h2>
-  <p>Connect with us through any of the platforms below:</p>
+  <p>At S2B AllFin Investments, we believe money should be managed with purpose, clarity, and trust.
+
+So that investors get everything under one roof, S2B brings together finance, investments, advisory, and future-ready solutions — all in one brand.
+
+🎯 One Brand. All Investments.Connect with us through any of the platforms below:</p>
   <div class="social-grid">
     <a href="tel:+919842438143" class="social-btn phone"><i class="fas fa-phone"></i> Call Us</a>
     <a href="https://www.instagram.com/financialbalaji" target="_blank" class="social-btn insta"><i class="fab fa-instagram"></i> Instagram</a>
     <a href="https://www.facebook.com/financialbalaji" target="_blank" class="social-btn fb"><i class="fab fa-facebook-f"></i> Facebook</a>
     <a href="https://x.com/financialbalaji" target="_blank" class="social-btn x"><i class="fab fa-x-twitter"></i> X (Twitter)</a>
     <a href="https://wa.me/919842438143" target="_blank" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-    <a href="https://t.me/yourusername" target="_blank" class="social-btn telegram"><i class="fab fa-telegram-plane"></i> Telegram</a>
-    <a href="https://www.linkedin.com/in/insurancebalaji4u" target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+    <a href="https://t.me/BalajiBremalingam" target="_blank" class="social-btn telegram"><i class="fab fa-telegram-plane"></i> Telegram</a>
+    <a href="https://www.linkedin.com/in/financialbalaji" target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
     <a href="mailto:insurancebalaji4u@gmail.com" class="social-btn email"><i class="fas fa-envelope"></i> Email Us</a>
   </div>
+
+  <div class="query-form">
+  <h3>Send Us Your Query</h3>
+  <p>So that we understand your needs better, share your query and our team will reach you shortly.</p>
+
+  <form onsubmit="submitQuery(event)">
+    <input type="text" id="qname" placeholder="Your Name *" required>
+    <input type="email" id="qemail" placeholder="Your Email *" required>
+    <input type="tel" id="qphone" placeholder="Mobile Number *" required>
+
+    <select id="qservice" required>
+      <option value="">Select Service</option>
+      <option>Stocks</option>
+      <option>Mutual Funds</option>
+      <option>FD / RD</option>
+      <option>Health Insurance</option>
+      <option>Life Insurance</option>
+      <option>Travel Insurance</option>
+      <option>Motor Insurance</option>
+      <option>Portfolio Management</option>
+      <option>Wills & succession planning </option>
+      <option>Bonds</option>
+      <option>Crypto</option>
+      <option>Real Estate</option>
+      <option>Commodities</option>
+      <option>Others</option>
+    </select>
+
+    <textarea id="qmessage" placeholder="Your Query" required></textarea>
+
+    <button type="submit">Submit Query</button>
+  </form>
+
+  <div class="success-msg" id="querySuccess">
+    Thank you! Your query has been received 🙏
+  </div>
+</div>
+<script>
+function submitQuery(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("qname").value;
+  const email = document.getElementById("qemail").value;
+  const phone = document.getElementById("qphone").value;
+  const service = document.getElementById("qservice").value;
+  const message = document.getElementById("qmessage").value;
+
+  // Insurance services list
+  const insuranceServices = [
+    "Life Insurance",
+    "Health Insurance",
+    "Motor Insurance",
+    "Travel Insurance"
+  ];
+
+  // Decide receiver email
+  let receiverEmail = "investmentsbalaji4u@gmail.com"; // default
+
+  if (insuranceServices.includes(service)) {
+    receiverEmail = "insurancebalaji4u@gmail.com";
+  }
+
+  const subject = encodeURIComponent("New Query from S2B Website");
+  const body = encodeURIComponent(
+    "Name: " + name + "\n" +
+    "Email: " + email + "\n" +
+    "Mobile: " + phone + "\n" +
+    "Service Interested: " + service + "\n\n" +
+    "Message:\n" + message
+  );
+
+  window.location.href =
+    "mailto:" + receiverEmail +
+    "?subject=" + subject +
+    "&body=" + body;
+}
+</script>
+
+
 </section>
 
 <footer>
