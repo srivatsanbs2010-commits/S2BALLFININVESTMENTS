@@ -267,3 +267,134 @@ body.contact {
 .telegram { background: #0088cc; }
 .linkedin { background: #0a66c2; }
 .email { background: #ea4335; }
+/* ===================== */
+/* RESPONSIVE DESIGN */
+/* ===================== */
+
+/* ---------- LAPTOP & LARGE DESKTOP (default already OK) ---------- */
+/* No changes needed above 1200px */
+
+/* ---------- TABLETS (768px – 1024px) ---------- */
+@media (max-width: 1024px) {
+
+  .navbar {
+    padding: 12px 24px;
+  }
+
+  .menu {
+    gap: 18px;
+  }
+
+  .logo span {
+    font-size: 18px;
+  }
+
+  section {
+    margin: 40px 20px;
+    padding: 40px 25px;
+  }
+
+  .dropdown-content {
+    min-width: 220px;
+  }
+
+  .social-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- MOBILE (up to 767px) ---------- */
+@media (max-width: 767px) {
+
+  /* NAVBAR */
+  .navbar {
+    padding: 10px 16px;
+    flex-wrap: wrap;
+  }
+
+  .logo img {
+    height: 38px;
+  }
+
+  .logo span {
+    font-size: 16px;
+  }
+
+  /* MENU STACKING */
+  .menu {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 14px;
+    display: none;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu a {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  /* DROPDOWN FULL WIDTH */
+  .dropdown-content {
+    position: relative;
+    min-width: 100%;
+    box-shadow: none;
+    border-radius: 6px;
+  }
+
+  .dropdown-content a {
+    padding: 10px 14px;
+  }
+
+  /* CONTENT */
+  section {
+    margin: 25px 14px;
+    padding: 30px 18px;
+  }
+
+  section h2 {
+    font-size: 22px;
+  }
+
+  section p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* SOCIAL BUTTONS */
+  .social-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .social-btn {
+    font-size: 14px;
+    padding: 13px 16px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 12px;
+  }
+}
+
+/* ---------- VERY SMALL PHONES (≤ 380px) ---------- */
+@media (max-width: 380px) {
+
+  .logo span {
+    font-size: 14px;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
+
+  .social-btn i {
+    font-size: 16px;
+  }
+}
