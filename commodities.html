@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Life Insurance</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<script>
+function toggleDropdown(id) {
+  document.querySelectorAll('.dropdown-content').forEach(menu => {
+    if (menu.id !== id) menu.classList.remove('show');
+  });
+  document.getElementById(id).classList.toggle('show');
+}
+
+window.addEventListener('click', function (e) {
+  if (!e.target.classList.contains('dropbtn')) {
+    document.querySelectorAll('.dropdown-content')
+      .forEach(menu => menu.classList.remove('show'));
+  }
+});
+</script>
+<body>
+
+<div class="navbar">
+  <div class="logo">
+    <img src="../assets/logo.jpeg">
+    <span>S2B ALLFIN INVESTMENTS</span>
+  </div>
+
+  <div class="menu">
+    <a href="../index.html">Home</a>
+
+    <div class="dropdown">
+      <a class="dropbtn" onclick="toggleDropdown('ins')">Insurance ▾</a>
+      <div class="dropdown-content" id="ins">
+        <a href="life-insurance.html">Life Insurance</a>
+        <a href="motor-insurance.html">Motor Insurance</a>
+        <a href="health-insurance.html">Health Insurance</a>
+        <a href="travel-insurance.html">Travel Insurance</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a class="dropbtn" onclick="toggleDropdown('inv')">Investments ▾</a>
+      <div class="dropdown-content" id="inv">
+        <a href="../investments/fixed-deposits.html">Fixed Deposits</a>
+        <a href="../investments/recurring-deposits.html">Recurring Deposits</a>
+        <a href="../investments/mutual-funds.html">Mutual Funds</a>
+        <a href="../investments/stocks-equity.html">Stocks & Equity</a>
+        <a href="../investments/bonds.html">Bonds</a>
+        <a href="../investments/commodities.html">Commodities</a>
+        <a href="../investments/real-estate.html">Real Estate</a>
+        <a href="../investments/crypto.html">Crypto</a>
+      </div>
+    </div>
+
+    <a href="../planning/portfolio-management.html">Portfolio Management</a>
+    <a href="../planning/wills-succession.html">Wills & Succession</a>
+    <a href="../contact.html">Contact Us</a>
+  </div>
+</div>
+
+<section>
+  <h2>Commodities</h2>
+  <p>Commodities include physical goods like gold, silver, oil, and agricultural products. Gold, in particular, is viewed as a "safe haven" and a hedge against inflation and currency devaluation. Including commodities in a portfolio adds a layer of protection because their prices often rise when the value of paper currency or financial assets falls. They are a "tangible" asset class that provides diversification away from traditional financial instruments.
+</p>
+</section>
+
+<footer>© 2025 S2B AllFin Investments</footer>
+
+<script>/* same JS block here */</script>
+</body>
+<body class="commodities"></body>
+</html>

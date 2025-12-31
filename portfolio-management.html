@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Life Insurance</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<script>
+function toggleDropdown(id) {
+  document.querySelectorAll('.dropdown-content').forEach(menu => {
+    if (menu.id !== id) menu.classList.remove('show');
+  });
+  document.getElementById(id).classList.toggle('show');
+}
+
+window.addEventListener('click', function (e) {
+  if (!e.target.classList.contains('dropbtn')) {
+    document.querySelectorAll('.dropdown-content')
+      .forEach(menu => menu.classList.remove('show'));
+  }
+});
+</script>
+<body>
+
+<div class="navbar">
+  <div class="logo">
+    <img src="../assets/logo.jpeg">
+    <span>S2B ALLFIN INVESTMENTS</span>
+  </div>
+
+  <div class="menu">
+    <a href="../index.html">Home</a>
+
+    <div class="dropdown">
+      <a class="dropbtn" onclick="toggleDropdown('ins')">Insurance ▾</a>
+      <div class="dropdown-content" id="ins">
+        <a href="life-insurance.html">Life Insurance</a>
+        <a href="motor-insurance.html">Motor Insurance</a>
+        <a href="health-insurance.html">Health Insurance</a>
+        <a href="travel-insurance.html">Travel Insurance</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a class="dropbtn" onclick="toggleDropdown('inv')">Investments ▾</a>
+      <div class="dropdown-content" id="inv">
+        <a href="../investments/fixed-deposits.html">Fixed Deposits</a>
+        <a href="../investments/recurring-deposits.html">Recurring Deposits</a>
+        <a href="../investments/mutual-funds.html">Mutual Funds</a>
+        <a href="../investments/stocks-equity.html">Stocks & Equity</a>
+        <a href="../investments/bonds.html">Bonds</a>
+        <a href="../investments/commodities.html">Commodities</a>
+        <a href="../investments/real-estate.html">Real Estate</a>
+        <a href="../investments/crypto.html">Crypto</a>
+      </div>
+    </div>
+
+    <a href="../planning/portfolio-management.html">Portfolio Management</a>
+    <a href="../planning/wills-succession.html">Wills & Succession</a>
+    <a href="../contact.html">Contact Us</a>
+  </div>
+</div>
+
+<section>
+  <h2>Portfolio Management</h2>
+  <p>Portfolio management is the process of selecting the right mix of the assets mentioned above to meet specific financial goals. It involves Asset Allocation (deciding how much goes into stocks vs. bonds) and Rebalancing (adjusting the mix as market conditions change). A well-managed portfolio isn't about picking the "best" single investment; it's about how different investments work together to maximize returns while minimizing risk.
+</section>
+
+<footer>© 2025 S2B AllFin Investments</footer>
+
+<script>/* same JS block here */</script>
+</body>portfolio-management"></body>
+</html>
